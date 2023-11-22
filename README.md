@@ -15,7 +15,7 @@ Projekt na przedmiot Sieci Komputerowe 2.
 
 ```mermaid
 classDiagram
-  direction TB
+  direction BT
   note for Language_C "gcc -c example.c -o example.o"
   class Language_C {
     +example.c
