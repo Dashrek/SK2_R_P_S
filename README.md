@@ -18,7 +18,7 @@ classDiagram
   Language_C: +example.c
   Language_C: +example.h
   Objective_File: example.o
-  Objective_File <|--Language_C : "gcc -c example.c -o example.o"
+  Objective_File <|-- Language_C : "gcc -c example.c -o example.o"
   Go_File: +example.go
   Go_File <|-- Objective_File : "//#cgo LDFLAGS: example.o -lallegro -lallegro_font -lallegro_color -lallegro_primitive"
   Go_File <|-- Objective_File : '//#include "example.h"'
