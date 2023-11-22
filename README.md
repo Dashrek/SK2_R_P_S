@@ -22,3 +22,7 @@ classDiagram
   Objective_File: example.o
   note "gcc -c example.c -o example.o"
   Objective_File <|-- Language_C
+  class Go_File
+  Go_File: +example.go
+  note "//#cgo LDFLAGS: example.o -lallegro -lallegro_font -lallegro_color -lallegro_primitive\n//#include \"example.h\""
+  Go_File <|-- Objective_File
