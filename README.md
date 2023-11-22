@@ -15,12 +15,18 @@ Projekt na przedmiot Sieci Komputerowe 2.
 
 ```mermaid
 classDiagram
+  class Language_C
   Language_C: +example.c
   Language_C: +example.h
+  class Objective_File
   Objective_File: example.o
-  Objective_File <|-- Language_C : gcc_example.o
+  note "gcc -c example.c -o example.o"
+  Objective_File <|-- Language_C
+  class Go_File
   Go_File: +example.go
-  Go_File <|-- Objective_File : flagi_cgo_example.o
-  Go_File <|-- Objective_File : include_example.h
+  note "//#cgo LDFLAGS: example.o -lallegro -lallegro_font -lallegro_color -lallegro_primitive\n//#include \"example.h\""
+  Go_File <|-- Objective_File
+  class Execute_File
   Execute_File: +example.exe
-  Execute_File <|-- Go_File : go_build
+  note "go build -o example.exe example.go"
+  Execute_File <|-- Go_File
