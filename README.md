@@ -53,6 +53,24 @@ Każdy zwycięzca rundy otrzymuje punkt zaklęć tego typu, jakim symbolem wygra
 Dotarcie do 10 s rundy automatycznie wywołuje opcje walki z ostatnią literą jaką nacisnął gracz, w tym z buffora zaklęć. Jeżeli gracz nie nacisnął żadnego przycisku w jakiejkolwiek rundzie, zostaje mu przypisany przycisk losowy, który towarzyszy jego postaci do czasu, jak nie naciśnie jakiegolwiek przycisku.
 Przyciskanie klawiszy q|w|e + r ma na celu przyspieszenie rundy przez wszystkich zawodników.
 Gracz w ciągu 7s rundy może wprowadzić dowolną ilość zaklęć, o ile pozwalają na to nałożone na niego efekty przeciwnika.
+Zaklęcia, które nie wywołały efektu na przeciwniku, zwracają 2 losowe punkty zużyte na zaklęcie.
 ---
 ### Spis zaklęć:
 ---
+|zaklęcia| q | w | e |
+|:---:|:---:|:---:|:---:|
+| | ![Image 1](./images/Quas_icon.webp)| ![Image 2](./images/Wex_icon.webp)| ![Image 3](./images/Exort_icon.webp) |
+
+|buf1|buf2|buf3|nazwa|opis|
+|:---:|:---:|:---:|:---:|:---:|
+|![Image 1](./images/Quas_icon.webp)|![Image 1](./images/Quas_icon.webp)|![Image 1](./images/Quas_icon.webp)| Cold Snap | Zatrzymuje przeciwnika z klawiszem, jaki wcisnął w ostatniej rundzie|
+|![Image 1](./images/Quas_icon.webp)|![Image 1](./images/Quas_icon.webp)|![Image 2](./images/Wex_icon.webp)| Ghost Walk | Zaklęcie uniemożliwia bycie celem wrogiego zaklęcia do końca rundy, poza Deafening Blast|
+|![Image 1](./images/Quas_icon.webp)|![Image 1](./images/Quas_icon.webp)|![Image 3](./images/Exort_icon.webp)| Ice Wall | Zaklęcie losowo opóźnia czas wywoływania zaklęć wszystkich przeciwników pomiędzy 0 a 1 s, oraz skraca ich czas rundy o jedną sekundę, tym samym uniemożliwiając efekty niektórych zaklęć, może samoistnie się nakładać z innymi tego typu zaklęciami. Trwa 3 rundy.|
+|![Image 1](./images/Quas_icon.webp)|![Image 1](./images/Wex_icon.webp)|![Image 3](./images/Wex_icon.webp)| Tornado | Zaklęcie wyklucza z pisania zaklęć z conajmniej połowy, a maksymalnie wszystkich przeciwników na 3 sekundy rundy|
+|![Image 1](./images/Quas_icon.webp)|![Image 1](./images/Wex_icon.webp)|![Image 3](./images/Exort_icon.webp)| Deafening Blast | Zaklęcie zamraża pozostałych graczy do końca rundy i zostawia ich z ostatnimi włączonymi klawiszami, klawisze przeciwników są widoczne dla rzucającego zaklęcie, poza zawodnikami używającymi ghost walk w tej rundzie|
+|![Image 1](./images/Quas_icon.webp)|![Image 1](./images/Exort_icon.webp)|![Image 3](./images/Exort_icon.webp)| Forged Spirit | Gracz dodaje po jednym punkcie obstawień do pozostałych pól, co zwiększa jego szansę na wygraną poprzez remis, jeżeli dane pole jest obstawione tylko przez forget spiryty, to wygrywają użytkownicy tego zaklęcia|
+|![Image 1](./images/Wex_icon.webp)|![Image 1](./images/Wex_icon.webp)|![Image 3](./images/Wex_icon.webp)| E.M.P. | Po jednej sekundzie uniemożliwia używania zaklęć u losowych przeciwników conajmniej połowy|
+|![Image 1](./images/Wex_icon.webp)|![Image 1](./images/Wex_icon.webp)|![Image 3](./images/Exort_icon.webp)| Aclarity | Zaklęcie to umożliwia używanie zaklęć od 2s na najbliższe 3 rundy i podwaja liczbę punktów za zwycięstwo w rundzie|
+|![Image 1](./images/Wex_icon.webp)|![Image 1](./images/Exort_icon.webp)|![Image 3](./images/Exort_icon.webp)| Chaos Meteor | Zaklęcie likwiduje losowo punkty u innych zawodników, ma 1/10 szans na likwidację każdego przeciwnika|
+|![Image 1](./images/Exort_icon.webp)|![Image 1](./images/Exort_icon.webp)|![Image 3](./images/Exort_icon.webp)| Sun Strike | Zaklęcie to zabija przeciwnika, a wywołane dwa razy w jednej rundzie przez tą samą osobę, zabija wszystkich przeciwników i gracz wygrywa walkę z klawiszem [e]|
+
