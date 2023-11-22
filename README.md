@@ -30,3 +30,4 @@ classDiagram
   Execute_File: +example.exe
   note "go build -o example.exe example.go"
   Execute_File <|-- Go_File
+  direction TB;
