@@ -18,3 +18,7 @@ classDiagram
   class Language_C
   Language_C: +example.c
   Language_C: +example.h
+  class Objective_File
+  Objective_File: example.o
+  note "gcc -c example.c -o example.o"
+  Objective_File <|-- Language_C
