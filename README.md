@@ -26,3 +26,7 @@ classDiagram
   Go_File: +example.go
   note "#cgo LDFLAGS: example.o -lallegro -lallegro_font -lallegro_color -lallegro_primitive\n#include example.h"
   Go_File <|-- Objective_File
+  class Execute_File
+  Execute_File: +example.exe
+  note "go build -o example.exe example.go"
+  Execute_File <|-- Go_File
