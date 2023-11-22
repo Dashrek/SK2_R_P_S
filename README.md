@@ -18,15 +18,3 @@ classDiagram
   class Language_C
   Language_C: +example.c
   Language_C: +example.h
-  class Objective_File
-  Objective_File: example.o
-  note "gcc -c example.c -o example.o"
-  Objective_File <|-- Language_C
-  class Go_File
-  Go_File: +example.go
-  note "//#cgo LDFLAGS: example.o -lallegro -lallegro_font -lallegro_color -lallegro_primitive\n//#include \"example.h\""
-  Go_File <|-- Objective_File
-  class Execute_File
-  Execute_File: +example.exe
-  note "go build -o example.exe example.go"
-  Execute_File <|-- Go_File
