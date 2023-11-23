@@ -45,7 +45,7 @@ classDiagram
 ---
 ## 3. Krótki opis aplikacji:
 ---
-Gra to sieciowa wersja gry papier, kamień, nożyce. Gra składa się z walk i rund.  
+> Gra to sieciowa wersja gry papier, kamień, nożyce. Gra składa się z walk i rund.  
 Walka to niedoprecyzowana ilość rund i kończy się, gdy pozostanie jedna osoba na placu boju.  
 Runda polega na wybraniu kamienia [q], nożyczek[w] lub papieru[e] oraz klawisza [r] w tym samym czasie pomiędzy 3-cią, a 10-tą sekundą rundy.  
 Wygrywanie rund polega na przewadze wg cyklu q>w>e>q. Wszystkie normalne przypadki wygranej są raczej zrozumiałe. Przypadek, kiedy wszystkie opcje są obstawione przez wszystkich zawodników ma dwa rozwiązania. Pierwsze, kiedy jest nierówna liczba zawodników, którzy wybrali jedną z trzech opcji, to wygrywają ci zawodnicy, których jest najmniej przy danej opcji. Druga, kiedy jest równa liczba zawodników przy każdej z opcji, to jest remis.  
