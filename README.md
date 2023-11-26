@@ -45,20 +45,20 @@ classDiagram
 ---
 ## 3. Krótki opis aplikacji:
 ---
-3. A. Typ gry:  
+- Typ gry:  
 Gra to sieciowa wersja gry papier, kamień, nożyce. Gra składa się z walk i rund.  
 Walka to niedoprecyzowana ilość rund i kończy się, gdy pozostanie jedna osoba na placu boju. Innym przypadkiem końca walki jest przegrana wszystkich, kiedy któryś lub kilku z zawodników trafi wszystkich zwycięzców opóźnionym zaklęciem likwidującym przeciwnika maksymalnie sekundę po wstępnym zakończeniu rundy.
-3. B. Normalne zwycięstwo:  
+- Normalne zwycięstwo:  
 Runda polega na wybraniu jednej z trzech broni kamienia [q], nożyczek[w] lub papieru[e] oraz klawisza [r] w tym samym czasie pomiędzy 3-cią, a 10-tą sekundą rundy.  
 Wygrywanie rund polega na przewadze wg cyklu broni q>w>e>q. Normalne przypadki wygranej rundy, to wybranie takiej opcji, która nie ma kontry np. kamień i nożyczki- do nastęnej przechodzi sam kamień. Normalny przypadek remisu jest wtedy, kiedy wszyscy zawodnicy wybrali tą samą broń. Przypadek, kiedy wszystkie opcje są obstawione przez wszystkich zawodników ma dwa rozwiązania. Pierwsze, kiedy jest nierówna liczba zawodników, którzy wybrali jedną z trzech opcji, to wygrywają ci zawodnicy, których jest najmniej przy danej opcji. Druga, kiedy jest równa liczba zawodników przy każdej z opcji, to jest remis.
-3. C. Punktacja i przegrani:  
+- Punktacja i przegrani:  
 Każda walka to bitwa o tysiąc punktów. Im więcej rund niezakończonych normalnym remisem, tym więcej podziałów w grze. Zwycięzca walki otrzymuje zawsze 1000 punktów. Pozostali zawodnicy otrzymują punkty poprzez podział np. jeżeli wypadło 9 rund, to osoby co dotrwały do 9-tej rundy i przegrały, otrzymują round(8/9*1000). Osoby, które nie wygrały żadnej rundy otrzymują 0 punktów. Rozważam, aby takie osoby mogły otrzymać 1 punkt zaklęć, jaki zapragną. Przegrani widzą dalszy przebieg walki.
-3. D. Punkty zaklęć: Każdy zwycięzca rundy otrzymuje punkt zaklęć tego typu, jakim symbolem wygrał rundę, zwycięzca walki otrzymuje dodatkowo po jednym punkcie każdego typu. Jeżeli zostaną zdobyte 3 punkty. To w pierwszych trzech sekundach rundy można stworzyć zaklęcie. Po trzeciej sekundzie można je użyć naciskając klawisz [f]. Użycie [f] przed 3-cią sekundą powoduje reset buffora, wpisanie czwartej litery z [q,w,e] usuwa pierwszą literę z bufora zaklęć. 
-3. E. Ewolucja gry, gdy dochodzą zaklęcia:  
+- Punkty zaklęć: Każdy zwycięzca rundy otrzymuje punkt zaklęć tego typu, jakim symbolem wygrał rundę, zwycięzca walki otrzymuje dodatkowo po jednym punkcie każdego typu. Jeżeli zostaną zdobyte 3 punkty. To w pierwszych trzech sekundach rundy można stworzyć zaklęcie. Po trzeciej sekundzie można je użyć naciskając klawisz [f]. Użycie [f] przed 3-cią sekundą powoduje reset buffora, wpisanie czwartej litery z [q,w,e] usuwa pierwszą literę z bufora zaklęć. 
+- Ewolucja gry, gdy dochodzą zaklęcia:  
 Dotarcie do 10 s rundy automatycznie wywołuje opcje walki z ostatnią literą jaką nacisnął gracz, w tym z buffora zaklęć. Jeżeli gracz nie nacisnął żadnego przycisku w jakiejkolwiek rundzie, zostaje mu przypisany przycisk losowy, który towarzyszy jego postaci do czasu, jak nie naciśnie jakiegolwiek przycisku.
 Przyciskanie klawiszy q|w|e + r ma na celu przyspieszenie rundy przez wszystkich zawodników, runda skończy się wówczas przed 10s, gdy wszyscy zawodnicy nacisnęli kombinację. Gracz w ciągu 7s rundy może wprowadzić dowolną ilość zaklęć, o ile pozwalają na to nałożone na niego efekty przeciwnika i liczba punktów mocy.
 Zaklęcia, które nie wywołały efektu na przeciwniku, nie zwracają jednego losowego punktu zużytego na zaklęcia.
-3. F. Widok gracza:  
+- Widok gracza:  
 Gracz powinien widzieć rozsuwającą się listę debufów na niego nałożonych z lewej strony gry, na środku powinien widzieć coś w rodzaju koła fortuny, gdzie powinny wyświetlać się pomniejsze informacje o graczach, na polach będących wycinkami koła, np. bronie jakie wybrali gracze pod koniec rundy, likwidacja zawodnika zmniejsza liczbę podziałów koła w następnej rundzie. Z prawej strony powinna być lista graczy z ich statusami, debufami i bufami, ilością punktów zaklęć, statusem rozłączenia i nieaktywnością w ostatnich rundach. Na dole powinna być opcja rozłączenia z gry. Menu gry jak na razie nie znane.
 
 ---
