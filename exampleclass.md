@@ -29,8 +29,8 @@ classDiagram
     +public static Type fromName(@NotNull String name);
     +public enum Type;
 }
-class Enum["Type"]{
-    <<Enumeration>>
+class Enum["public enum Type"]{
+    <<enumeration>>
     UPPER
     LOWER
     CAPITALIZE
