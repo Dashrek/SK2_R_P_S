@@ -27,11 +27,12 @@ classDiagram
     ~public @NotNull String description();
     +private @NotNull String caseTransformation(@NotNull String text);
     +public static Type fromName(@NotNull String name);
-    <<Enumeration>>Type{
-      UPPER,
-      LOWER,
-      CAPITALIZE,
-      IDENTITY;
+    Type{
+      <<Enumeration>>
+      UPPER
+      LOWER
+      CAPITALIZE
+      IDENTITY
     }
   }
   TextTransformer <|-- TextTransformerDecorator
