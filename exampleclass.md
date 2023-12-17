@@ -27,5 +27,5 @@ classDiagram
   }
   TextTransformer <|-- TextTransformerDecorator
   TextTransformer <|-- TextClass
-  TextTransformerDecorator <|-- CaseTransform
+  TextTransformerDecorator <|-- "transform.CaseTransform"
 ```
