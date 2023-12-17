@@ -43,6 +43,15 @@ class DuplicatesRemovalTransform["DuplicatesRemovalTransform : TextTransformerDe
   ~public @NotNull String description();
   +private @NotNull String removeAdjacentDuplicates(@NotNull String input);
 }
+class LaTeXEscapesTransform["LaTeXEscapesTransform : TextTransformerDecorator"]{
+  +private static final Map<Character, String> latexCharacterMappings;
+  +private final boolean latexCharactersAllowed;
+  +public LaTeXEscapesTransform(@NotNull TextTransformer textToTransform, boolean latexCharactersAllowed);
+  ~public @NotNull String transform();
+  ~public @NotNull String description();
+  +private @NotNull String addLaTeXEscapes();
+}
+  TextTransformerDecorator <|-- LaTeXEscapesTransform
   TextTransformerDecorator <|-- DuplicatesRemovalTransform
   CaseTransform .. Enum
   TextTransformer <|-- TextTransformerDecorator
