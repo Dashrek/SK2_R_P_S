@@ -26,10 +26,10 @@ classDiagram
     ~public @NotNull String transform();
     ~public @NotNull String description(); 
     +private @NotNull String caseTransformation(@NotNull String text);
-    +public static Type fromName(@NotNull String name);
     +public enum Type;
 }
 class Enum["public enum Type"]{
+    +public static Type fromName(@NotNull String name);
     <<enumeration>>
     UPPER
     LOWER
@@ -69,6 +69,33 @@ class NumberExpansionTransform["NumberExpansionTransform : TextTransformerDecora
   ~public @NotNull String description();
   +private @NotNull String expandNumbers(@NotNull String s);
 }
+class ReverseTransform["ReverseTransform : TextTransformerDecorator"]{
+  +private final boolean inverseAllow;
+  +public ReverseTransform(@NotNull TextTransformer textToTransform, boolean reversalAllowed);
+  ~public @NotNull String transform();
+  ~public @NotNull String description();
+  +private @NotNull String revertString(@NotNull String input);
+}
+class ShortcutTransform["ShortcutTransform : TextTransformerDecorator"]{
+  +private final Type shortcutType;
+  +private final Map<String, String> shortcutMap;
+  +public ShortcutTransform(@NotNull TextTransformer textToTransform, @NotNull Type shortcutType);
+  +private Map<String, String> initializeShortcutMap();
+  ~public @NotNull String transform();
+  ~public @NotNull String description();
+  +public @NotNull String applyShortcutModification(@NotNull String inputText);
+  +public enum Type;
+}
+class Enum1["public enum Type"]{
+    +public static Type fromName(@NotNull String name);
+    <<enumeration>>
+    EXPAND
+    COMPRESS
+}
+
+  ShortcutTransform .. Enum1
+  TextTransformerDecorator <|-- ShortcutTransform
+  TextTransformerDecorator <|-- ReverseTransform
   TextTransformerDecorator <|-- NumberExpansionTransform
   TextTransformerDecorator <|-- LaTeXEscapesTransform
   TextTransformerDecorator <|-- DuplicatesRemovalTransform
