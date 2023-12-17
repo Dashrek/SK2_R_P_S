@@ -27,7 +27,7 @@ classDiagram
     ~public @NotNull String description();
     +private @NotNull String caseTransformation(@NotNull String text);
     +public static Type fromName(@NotNull String name);
-    enum Type{
+    class Type{
       <<Enumeration>>
       UPPER
       LOWER
