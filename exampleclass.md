@@ -28,7 +28,7 @@ classDiagram
     +private @NotNull String caseTransformation(@NotNull String text);
     +public static Type fromName(@NotNull String name);
     +public enum Type;
-    <<Enumeration>>
+    <<Enumeration>>["Type"]
     UPPER
     LOWER
     CAPITALIZE
