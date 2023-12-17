@@ -36,7 +36,7 @@ class Enum["Type"]{
     CAPITALIZE
     IDENTITY
 }
-  CaseTransform *.. Enum
+  CaseTransform .. Enum
   TextTransformer <|-- TextTransformerDecorator
   TextTransformer <|-- TextClass
   TextTransformerDecorator <|-- CaseTransform
