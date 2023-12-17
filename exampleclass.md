@@ -1,4 +1,4 @@
-##Diagram Logiki
+## Diagram Logiki
 ```mermaid
 classDiagram
   class TextTransformer {
