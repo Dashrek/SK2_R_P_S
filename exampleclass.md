@@ -16,7 +16,7 @@ classDiagram
     -public abstract @NotNull String transform();
     +public abstract @NotNull String description();
   }
-  class "transform.CaseTransform" {
+  class "Case Transform" {
     +private final Type typeOfTransform;
     +public CaseTransform(@NotNull TextTransformer textToTransform, @NotNull Type typeOfTransform);
     ~public @NotNull String transform();
@@ -27,5 +27,5 @@ classDiagram
   }
   TextTransformer <|-- TextTransformerDecorator
   TextTransformer <|-- TextClass
-  TextTransformerDecorator <|-- "transform.CaseTransform"
+  TextTransformerDecorator <|-- "Case Transform"
 ```
