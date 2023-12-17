@@ -13,7 +13,7 @@ classDiagram
   class TextTransformerDecorator{
     +protected TextTransformer textToTransform;
     +public TextTransformerDecorator(@NotNull TextTransformer textToTransform);
-    !public abstract @NotNull String transform();
+    -public abstract @NotNull String transform();
     +public abstract @NotNull String description();
   }
   class CaseTransform{
