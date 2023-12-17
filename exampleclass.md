@@ -10,13 +10,13 @@ classDiagram
     +public TextClass(@NotNull String str);
     +public @NotNull String transform();
   }
-  class TextTransformerDecorator{
+  class TextTransformerDecorator {
     +protected TextTransformer textToTransform;
     +public TextTransformerDecorator(@NotNull TextTransformer textToTransform);
     -public abstract @NotNull String transform();
     +public abstract @NotNull String description();
   }
-  class "transform.CaseTransform"{
+  class "transform.CaseTransform" {
     +private final Type typeOfTransform;
     +public CaseTransform(@NotNull TextTransformer textToTransform, @NotNull Type typeOfTransform);
     ~public @NotNull String transform();
