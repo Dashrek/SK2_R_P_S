@@ -10,5 +10,5 @@ classDiagram
     +public TextClass(@NotNull String str);
     +public @NotNull String transform();
   }
-  TextTransformer <|-- TextTransformerDecorator
+  TextTransformer <|-- TextClass
 ```
