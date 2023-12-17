@@ -6,7 +6,7 @@ classDiagram
     +public @NotNull String getText();
     +public abstract @NotNull String transform();
   }
-  class TextClass: TextTransformer {
+  class TextClass {
     +public TextClass(@NotNull String str);
     +public @NotNull String transform();
   }
