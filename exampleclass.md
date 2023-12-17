@@ -8,7 +8,6 @@ classDiagram
   }
   class TextClass {
     +public TextClass(@NotNull String str);
-    @Override
     +public @NotNull String transform();
   }
   TextTransformer <|-- TextClass
