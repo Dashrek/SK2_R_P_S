@@ -16,7 +16,7 @@ classDiagram
     -public abstract @NotNull String transform();
     +public abstract @NotNull String description();
   }
-  class CaseTransform {
+  class CaseTransform["transform.CaseTransform : TextTransformerDecorator"] {
     +private final Type typeOfTransform;
     +public CaseTransform(@NotNull TextTransformer textToTransform, @NotNull Type typeOfTransform);
     ~public @NotNull String transform();
