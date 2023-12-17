@@ -29,7 +29,7 @@ classDiagram
     +public static Type fromName(@NotNull String name);
     +public enum Type;
 }
-class Enum["Type]{
+class Enum["Type"]{
     <<Enumeration>>
     UPPER
     LOWER
