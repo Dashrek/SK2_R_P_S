@@ -1,5 +1,8 @@
-## Diagram Logiki
+
 ```mermaid
+---
+title: Diagram Logiki
+---
 classDiagram
   class TextTransformer {
     protected String text;
