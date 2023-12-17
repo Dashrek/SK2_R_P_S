@@ -26,8 +26,14 @@ classDiagram
     ~public @NotNull String transform();
     ~public @NotNull String description();
     +private @NotNull String caseTransformation(@NotNull String text);
-    <<Enumeration>>+public enum Type;
+    <<Enumeration>> Type;
     +public static Type fromName(@NotNull String name);
+    enum Type{
+      UPPER,
+      LOWER,
+      CAPITALIZE,
+      IDENTITY;
+    }
   }
   TextTransformer <|-- TextTransformerDecorator
   TextTransformer <|-- TextClass
