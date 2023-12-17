@@ -1,4 +1,4 @@
-
+#### pl.put.poznan.transformer.server.logic
 ```mermaid
 ---
 title: Diagram Logiki
@@ -36,14 +36,14 @@ class Enum["public enum Type"]{
     CAPITALIZE
     IDENTITY
 }
-class DuplicatesRemovalTransform["DuplicatesRemovalTransform : TextTransformerDecorator"] {
+class DuplicatesRemovalTransform["transform.DuplicatesRemovalTransform : TextTransformerDecorator"] {
   +private final boolean removeAllow;
   +public DuplicatesRemovalTransform(@NotNull TextTransformer textToTransform, boolean removingAllowed);
   ~public @NotNull String transform();
   ~public @NotNull String description();
   +private @NotNull String removeAdjacentDuplicates(@NotNull String input);
 }
-class LaTeXEscapesTransform["LaTeXEscapesTransform : TextTransformerDecorator"]{
+class LaTeXEscapesTransform["transform.LaTeXEscapesTransform : TextTransformerDecorator"]{
   +private static final Map<Character, String> latexCharacterMappings;
   +private final boolean latexCharactersAllowed;
   +public LaTeXEscapesTransform(@NotNull TextTransformer textToTransform, boolean latexCharactersAllowed);
