@@ -51,6 +51,25 @@ class LaTeXEscapesTransform["transform.LaTeXEscapesTransform : TextTransformerDe
   ~public @NotNull String description();
   +private @NotNull String addLaTeXEscapes();
 }
+class NumberExpansionTransform["NumberExpansionTransform : TextTransformerDecorator"]{
+  +private static final Map<Integer, String> DIGITS;
+  +private static final Map<Integer, String> TEENS;
+  +private static final Map<Integer, String> TENS;
+  +private static final Map<Integer, String> HUNDREDS;
+  +private static final PluralVariant thousands;
+  +private static final PluralVariant millions;
+  +private static final PluralVariant billions;
+  +private static final PluralVariant trillions;
+  +private static final PluralVariant quadrillions;
+  +private static final PluralVariant quintillions;
+  +private final boolean numberExpandAllowed;
+  +public NumberExpansionTransform(@NotNull TextTransformer textToTransform, boolean numberExpandAllowed);
+  +private static @NotNull String numberInWords(long number);
+  ~public @NotNull String transform();
+  ~public @NotNull String description();
+  +private @NotNull String expandNumbers(@NotNull String s);
+}
+  TextTransformerDecorator <|-- NumberExpansionTransform
   TextTransformerDecorator <|-- LaTeXEscapesTransform
   TextTransformerDecorator <|-- DuplicatesRemovalTransform
   CaseTransform .. Enum
