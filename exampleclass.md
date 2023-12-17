@@ -2,6 +2,7 @@
 ```mermaid
 ---
 title: Diagram Logiki
+
 ---
 classDiagram
   class TextTransformer {
@@ -25,7 +26,7 @@ classDiagram
     ~public @NotNull String transform();
     ~public @NotNull String description();
     +private @NotNull String caseTransformation(@NotNull String text);
-    +public enum Type;
+    <<Enumeration>>+public enum Type;
     +public static Type fromName(@NotNull String name);
   }
   TextTransformer <|-- TextTransformerDecorator
