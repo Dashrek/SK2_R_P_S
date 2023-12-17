@@ -6,11 +6,11 @@ classDiagram
     public @NotNull String getText();
     public abstract @NotNull String transform();
   }
-  class TextClass {
+  class TextClass["TextClass : TextTransformer"] {
     +public TextClass(@NotNull String str);
     +public @NotNull String transform();
   }
-  class TextTransformerDecorator {
+  class TextTransformerDecorator["TextTransformerDecorator : TextTransformer"] {
     +protected TextTransformer textToTransform;
     +public TextTransformerDecorator(@NotNull TextTransformer textToTransform);
     -public abstract @NotNull String transform();
