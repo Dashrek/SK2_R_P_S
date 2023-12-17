@@ -28,11 +28,11 @@ classDiagram
     +private @NotNull String caseTransformation(@NotNull String text);
     +public static Type fromName(@NotNull String name);
     +public enum Type;
-    <<Enumeration>>["Type"]
+    {<<Enumeration>>["Type"]
     UPPER
     LOWER
     CAPITALIZE
-    IDENTITY
+    IDENTITY}
 }
   TextTransformer <|-- TextTransformerDecorator
   TextTransformer <|-- TextClass
