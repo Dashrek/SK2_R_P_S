@@ -12,7 +12,7 @@ classDiagram
   }
   class TextClass["TextClass : TextTransformer"] {
     +public TextClass(@NotNull String str);
-    +public @NotNull String transform();
+    ~public @NotNull String transform();
   }
   class TextTransformerDecorator["TextTransformerDecorator : TextTransformer"] {
     +protected TextTransformer textToTransform;
@@ -36,6 +36,14 @@ class Enum["public enum Type"]{
     CAPITALIZE
     IDENTITY
 }
+class DuplicatesRemovalTransform["DuplicatesRemovalTransform : TextTransformerDecorator"] {
+  +private final boolean removeAllow;
+  +public DuplicatesRemovalTransform(@NotNull TextTransformer textToTransform, boolean removingAllowed);
+  ~public @NotNull String transform();
+  ~public @NotNull String description();
+  +private @NotNull String removeAdjacentDuplicates(@NotNull String input);
+}
+  TextTransformerDecorator <|-- DuplicatesRemovalTransform
   CaseTransform .. Enum
   TextTransformer <|-- TextTransformerDecorator
   TextTransformer <|-- TextClass
